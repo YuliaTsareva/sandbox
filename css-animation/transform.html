@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .row {
+            margin-bottom: 30px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #9b59b6;
+            transition: transform 1s;
+        }
+
+        .smaller:hover {
+            transform: scale(0.5, 0.5);
+        }
+
+        .bigger:hover {
+            transform: scale(2, 2);
+        }
+
+        .rotate {
+            background-color: #f1c40f;
+        }
+
+        .rotate-clockwise:hover {
+            transform: rotate(90deg);
+        }
+
+        .rotate-counter-clockwise:hover {
+            transform: rotate(-90deg);
+        }
+
+        .skew {
+            background-color: #2ecc71;
+        }
+
+        .skew-x-positive:hover {
+            transform: skewX(30deg);
+        }
+
+        .skew-x-negative:hover {
+            transform: skewX(-30deg);
+        }
+
+        .skew-y-positive:hover {
+            transform: skewY(30deg);
+        }
+
+        .skew-y-negative:hover {
+            transform: skewY(-30deg);
+        }
+
+        .translate {
+            background-color: #e74c3c;
+        }
+
+        .translate-right:hover {
+            transform: translateX(300px);
+        }
+
+        .translate-top:hover {
+            transform: translateY(-300px);
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Transform</h1>
+
+<div class="row">
+    <section>
+        <h2>Twice smaller</h2>
+        <code>transform: scale(0.5, 0.5);</code>
+
+        <div class="box smaller"></div>
+    </section>
+    <section>
+        <h2>Twice bigger</h2>
+        <code>transform: scale(2, 2);</code>
+
+        <div class="box bigger"></div>
+    </section>
+
+    <section>
+        <h2>Rotate clockwise</h2>
+        <code>transform: rotate(90deg);</code>
+
+        <div class="box rotate rotate-clockwise"></div>
+    </section>
+    <section>
+        <h2>Rotate counter-clockwise</h2>
+        <code>transform: rotate(-90deg);</code>
+
+        <div class="box rotate rotate-counter-clockwise"></div>
+    </section>
+</div>
+
+<div class="row">
+    <section>
+        <h2>Skew X (positive angle)</h2>
+        <code>transform: skewX(30deg);</code>
+
+        <div class="box skew skew-x-positive"></div>
+    </section>
+    <section>
+        <h2>Skew X (negative angle)</h2>
+        <code>transform: skewX(-30deg);</code>
+
+        <div class="box skew skew-x-negative"></div>
+    </section>
+    <section>
+        <h2>Skew Y (positive angle)</h2>
+        <code>transform: skewY(30deg);</code>
+
+        <div class="box skew skew-y-positive"></div>
+    </section>
+    <section>
+        <h2>Skew Y (negative angle)</h2>
+        <code>transform: skewY(-30deg);</code>
+
+        <div class="box skew skew-y-negative"></div>
+    </section>
+</div>
+<div>
+    <section>
+        <h2>Translate to the right</h2>
+        <code>transform: translateX(300px);</code>
+
+        <div class="box translate translate-right"></div>
+    </section>
+    <section>
+        <h2>Translate to the top</h2>
+        <code>transform: translateY(-300px);</code>
+
+        <div class="box translate translate-top"></div>
+    </section>
+</div>
+</body>
+</html>

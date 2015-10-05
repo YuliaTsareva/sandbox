@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    margin: 40px 30px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+}
+
+section {
+    display: inline-block;
+    margin-right: 30px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #9b59b6;
+            transition-property: background-color, border-radius;
+            transition-duration: 0.7s;
+        }
+
+        .box.color:hover {
+            background-color: #2ecc71;
+        }
+
+        .box.circle:hover {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Transitions</h1>
+
+<section>
+    <h2>Change color</h2>
+
+    <div class="box color"></div>
+</section>
+<section>
+    <h2>Change form</h2>
+
+    <div class="box circle"></div>
+</section>
+<section>
+    <h2>Color & form</h2>
+
+    <div class="box color circle"></div>
+</section>
+</body>
+</html>

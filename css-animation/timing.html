@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f39c12;
+            transition: transform 3s;
+        }
+
+        .translate:hover {
+            transform: translateY(300px);
+        }
+
+        .ease:hover {
+            transition-timing-function: ease;
+        }
+
+        .linear:hover {
+            transition-timing-function: linear;
+        }
+
+        .ease-in:hover {
+            transition-timing-function: ease-in;
+        }
+
+        .ease-out:hover {
+            transition-timing-function: ease-out;
+        }
+
+        .ease-in-out:hover {
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Timing Functions</h1>
+
+<section>
+    <h2>Ease (default)</h2>
+
+    <div class="box translate ease"></div>
+</section>
+<section>
+    <h2>Linear</h2>
+
+    <div class="box translate linear"></div>
+</section>
+<section>
+    <h2>Ease-in</h2>
+
+    <div class="box translate ease-in"></div>
+</section>
+<section>
+    <h2>Ease-out</h2>
+
+    <div class="box translate ease-out"></div>
+</section>
+<section>
+    <h2>Ease-in-out</h2>
+
+    <div class="box translate ease-in-out"></div>
+</section>
+</body>
+</html>

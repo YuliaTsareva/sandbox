@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .gears {
+            margin: 30px 0;
+        }
+
+        .gear.small {
+            transition: transform 10s ease-in;
+        }
+
+        .gear.big {
+            transition: transform 12s 2s ease-in;
+        }
+
+        .gears:hover > .small {
+            transform: rotate(-360deg);
+        }
+
+        .gears:hover > .big {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+<h2>Mouse over the gears to start the animation</h2>
+
+<div class="gears">
+    <img class="gear small" src="images/small_gear.png">
+    <img class="gear big" src="images/big_gear.png">
+</div>
+</body>
+</html>
