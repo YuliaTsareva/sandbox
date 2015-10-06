@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" type="text/css" href="../common.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>3D Cube</h1>
+
+<h2>Use arrows to rotate</h2>
+
+<div id="cube">
+    <div class="front side">1</div>
+    <div class="left side">2</div>
+    <div class="right side">5</div>
+    <div class="top side">3</div>
+    <div class="bottom side">4</div>
+    <div class="back side">6</div>
+</div>
+
+<script>
+    function addEvent(element, eventName, callback) {
+        if (element.addEventListener) {
+            element.addEventListener(eventName, callback, false);
+        } else if (element.attachEvent) {
+            element.attachEvent("on" + eventName, callback);
+        }
+    }
+
+    addEvent(window, "keydown", onKeyPressed);
+
+    var angle1 = 0;
+    var angle2 = 0;
+
+    var delta = 5;
+
+    function onKeyPressed(event) {
+        switch (event.keyCode) {
+            case 37: // Left
+                angle2 -= delta;
+                break;
+            case 38: // Up
+                angle1 += delta;
+                break;
+            case 39: // Right
+                angle2 += delta;
+                break;
+            case 40: // Down
+                angle1 -= delta;
+                break;
+        }
+
+        var transform1 = "rotateX(" + angle1 + "deg)";
+        var transform2 = "rotateY(" + angle2 + "deg)";
+        document.getElementById("cube").style.transform = "perspective(900px) " + transform1 + " " + transform2;
+    }
+</script>
+</body>
+</html>

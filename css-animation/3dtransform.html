@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #1abc9c;
+            transition: transform 1s;
+        }
+
+        .box.translate {
+            background-color: #3498db;
+        }
+
+        .box.translate:hover {
+            transform: translate3d(50px, 50px, 50px);
+        }
+
+        .box.scale {
+            background-color: #9b59b6;
+        }
+
+        .box.scale:hover {
+            transform: scale3d(2, 2, 2);
+        }
+
+        .box.rotate-x:hover {
+            transform: rotate3d(1, 0, 0, 90deg);
+        }
+
+        .box.rotate-y:hover {
+            transform: rotate3d(0, 1, 0, 90deg);
+        }
+
+        .box.rotate-z:hover {
+            transform: rotate3d(0, 0, 1, 90deg);
+        }
+    </style>
+</head>
+<body>
+<h1>CSS 3D Transform</h1>
+
+<div class="row">
+    <section>
+        <h2>Translate</h2>
+        <code>transform: translate3d(50px, 50px, 50px);</code>
+
+        <div class="box translate"></div>
+    </section>
+    <section>
+        <h2>Scale</h2>
+        <code>transform: scale3d(2, 2, 2);</code>
+
+        <div class="box scale"></div>
+    </section>
+</div>
+<div>
+    <section>
+        <h2>Rotate</h2>
+        <code>transform: rotate3d(1, 0, 0, 90deg);</code>
+
+        <div class="box rotate-x"></div>
+    </section>
+    <section>
+        <h2>Rotate</h2>
+        <code>transform: rotate3d(0, 1, 0, 90deg);</code>
+
+        <div class="box rotate-y"></div>
+    </section>
+    <section>
+        <h2>Rotate</h2>
+        <code>transform: rotate3d(0, 0, 1, 90deg);</code>
+
+        <div class="box rotate-z">Test</div>
+    </section>
+</div>
+</body>
+</html>
