@@ -7,104 +7,32 @@
           integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div id="container">
     <h1>#sketch</h1>
 
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/1_preview.jpg">
+    <div id="sketches">
+    </div>
 
-            <div class="back">Еще одна небезызвестная актриса #sketch #nightsketch Сходство с оригиналом чисто
-                условное, но если сравнивать с тем, что было год назад, то, кажется, есть какой-то прогресс.
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>16
+    <script id="template" type="text/x-handlebars-template">
+        {{#each sketches}}
+        <div class="col-md-3 col-sm-4 col-xs-6">
+            <div class="sketch">
+                <img class="front" src="images/{{image}}">
+
+                <div class="back">
+                    {{{comment}}}
+                    <div class="like">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>{{likes}}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/2_preview.jpg">
-
-            <div class="back">Испанская актриса Чус Лампреаве (Chus Lampreave) #sketch #nightsketch
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>11
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/3_preview.jpg">
-
-            <div class="back">По мотивам Дюрера #sketch #nightsketch
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>17
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/4_preview.jpg">
-
-            <div class="back">Возвращаясь к моим упражнениям #sketch<br>What matters in life is not what happens to
-                you but what you remember and how you remember it
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>9
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/5.jpg">
-
-            <div class="back">
-                Моя версия Хулио Кортасара #sketch<br>Определенно, утром я еще пожалею о бесцельно проведенной ночи.
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>11
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/6_preview.jpg">
-
-            <div class="back">Еженочные зарисовки #sketch<br>Мужчин я тоже иногда рисую, но с ними все сложно.
-                Длинные волосы упрощают дело.
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>18
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/7_preview.jpg">
-
-            <div class="back">#sketch #100 в этом году. Адриана Лима
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>12
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="sketch">
-            <img class="front" src="images/8_preview.jpg">
-
-            <div class="back">Традиционный ночной #sketch. Портрет актрисы, но лицо не похоже, поэтому я не скажу
-                какой :)
-                <div class="like">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>14
-                </div>
-            </div>
-        </div>
-    </div>
+        {{/each}}
+    </script>
+    <script src="sketches.js"></script>
 </div>
 </body>
 </html>
