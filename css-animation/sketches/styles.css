@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     margin: 25px 30px;
     background-color: #eee;
+    min-width: 500px;
 }
 
 .container {
@@ -24,6 +25,7 @@ h1 {
     transform-style: preserve-3d;
     transition: transform 1.0s;
     perspective: 1000px;
+    margin-bottom: 20px;
 }
 
 .like {
