@@ -8,6 +8,8 @@
     margin-left: -100px;
     transform-style: preserve-3d;
     transition: transform 1s;
+    -webkit-transform: perspective(900px) rotateX(-20deg) rotateY(-35deg);
+    -ms-transform: perspective(900px) rotateX(-20deg) rotateY(-35deg);
     transform: perspective(900px) rotateX(-20deg) rotateY(-35deg);
 }
 
@@ -27,6 +29,8 @@
     background-color: #1abc9c;
     top: 0;
     left: 0;
+    -webkit-transform: translate3d(0, 0, 100px);
+    -ms-transform: translate3d(0, 0, 100px);
     transform: translate3d(0, 0, 100px);
 }
 
@@ -34,7 +38,11 @@
     background-color: #3498db;
     top: 0;
     left: -100%;
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
+    -webkit-transform: translate3d(0, 0, 100px) rotateY(-90deg);
+    -ms-transform: translate3d(0, 0, 100px) rotateY(-90deg);
     transform: translate3d(0, 0, 100px) rotateY(-90deg);
 }
 
@@ -42,7 +50,11 @@
     background-color: #9b59b6;
     top: 0;
     left: 100%;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
     transform-origin: 0 0;
+    -webkit-transform: translate3d(0, 0, 100px) rotateY(90deg);
+    -ms-transform: translate3d(0, 0, 100px) rotateY(90deg);
     transform: translate3d(0, 0, 100px) rotateY(90deg);
 }
 
@@ -50,7 +62,11 @@
     background-color: #f1c40f;
     top: -100%;
     left: 0;
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
     transform-origin: 0 100%;
+    -webkit-transform: translate3d(0, 0, 100px) rotateX(90deg);
+    -ms-transform: translate3d(0, 0, 100px) rotateX(90deg);
     transform: translate3d(0, 0, 100px) rotateX(90deg);
 }
 
@@ -58,7 +74,11 @@
     background-color: #e74c3c;
     top: 100%;
     left: 0;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
     transform-origin: 0 0;
+    -webkit-transform: translate3d(0, 0, 100px) rotateX(-90deg);
+    -ms-transform: translate3d(0, 0, 100px) rotateX(-90deg);
     transform: translate3d(0, 0, 100px) rotateX(-90deg);
 }
 
@@ -66,5 +86,7 @@
     background-color: #f39c12;
     top: 0;
     left: 0;
+    -webkit-transform: translate3d(0, 0, -100px) rotateY(180deg);
+    -ms-transform: translate3d(0, 0, -100px) rotateY(180deg);
     transform: translate3d(0, 0, -100px) rotateY(180deg);
 }
