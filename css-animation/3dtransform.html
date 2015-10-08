@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Animation</title>
+    <title>CSS Animations</title>
     <link rel="stylesheet" type="text/css" href="common.css">
     <style>
         .box {
@@ -28,16 +28,20 @@
             transform: scale3d(2, 2, 2);
         }
 
-        .box.rotate-x:hover {
-            transform: rotate3d(1, 0, 0, 90deg);
+        .rotate-x:hover {
+            transform: rotate3d(1, 0, 0, 360deg);
         }
 
-        .box.rotate-y:hover {
-            transform: rotate3d(0, 1, 0, 90deg);
+        .rotate-y:hover {
+            transform: rotate3d(0, 1, 0, 360deg);
         }
 
-        .box.rotate-z:hover {
-            transform: rotate3d(0, 0, 1, 90deg);
+        .rotate-z:hover {
+            transform: rotate3d(0, 0, 1, 360deg);
+        }
+
+        .rotate-xyz:hover {
+            transform: rotate3d(1, 1, 1, 360deg);
         }
     </style>
 </head>
@@ -47,35 +51,41 @@
 <div class="row">
     <section>
         <h2>Translate</h2>
-        <code>transform: translate3d(50px, 50px, 50px);</code>
+        <code>translate3d(50px, 50px, 50px)</code>
 
         <div class="box translate"></div>
     </section>
     <section>
         <h2>Scale</h2>
-        <code>transform: scale3d(2, 2, 2);</code>
+        <code>scale3d(2, 2, 2)</code>
 
         <div class="box scale"></div>
     </section>
 </div>
 <div>
     <section>
-        <h2>Rotate</h2>
-        <code>transform: rotate3d(1, 0, 0, 90deg);</code>
+        <h2>Rotate X</h2>
+        <code>rotate3d(1, 0, 0, 360deg)</code>
 
         <div class="box rotate-x"></div>
     </section>
     <section>
-        <h2>Rotate</h2>
-        <code>transform: rotate3d(0, 1, 0, 90deg);</code>
+        <h2>Rotate Y</h2>
+        <code>rotate3d(0, 1, 0, 360deg)</code>
 
         <div class="box rotate-y"></div>
     </section>
     <section>
-        <h2>Rotate</h2>
-        <code>transform: rotate3d(0, 0, 1, 90deg);</code>
+        <h2>Rotate Z</h2>
+        <code>rotate3d(0, 0, 1, 360deg)</code>
 
         <div class="box rotate-z"></div>
+    </section>
+    <section>
+        <h2>Rotate XYZ</h2>
+        <code>rotate3d(1, 1, 1, 360deg)</code>
+
+        <div class="box rotate-xyz"></div>
     </section>
 </div>
 </body>
