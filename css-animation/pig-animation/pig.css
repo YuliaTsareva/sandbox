@@ -1,0 +1,163 @@
+#pig-animation {
+    width: 800px;
+    height: 600px;
+    background: url('img/background.png') top left no-repeat;
+    border-radius: 30px;
+    margin: 10px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#fence-far {
+    position: absolute;
+    left: -10px;
+    top: 30px;
+}
+
+#fence-near {
+    position: absolute;
+    left: -10px;
+    top: 180px;
+}
+
+#pig-leg-left-back {
+    position: absolute;
+    left: 240px;
+    top: 370px;
+}
+
+#pig-leg-left-front {
+    position: absolute;
+    left: 480px;
+    top: 370px;
+}
+
+#pig-body {
+    position: absolute;
+    left: 160px;
+    top: 275px;
+}
+
+#pig-tail {
+    position: absolute;
+    left: 150px;
+    top: 260px;
+}
+
+#pig-ear {
+    position: absolute;
+    left: 460px;
+    top: 240px;
+}
+
+#pig-leg-right-back {
+    position: absolute;
+    left: 200px;
+    top: 380px;
+}
+
+#pig-leg-right-front {
+    position: absolute;
+    left: 440px;
+    top: 380px;
+}
+
+footer {
+    font-family: sans-serif;
+    color: #666;
+    font-size: 12px;
+    margin: 5px auto 0;
+    width: 800px;
+}
+
+/*********** ANIMATIONS ***********/
+
+@keyframes legs1 {
+    from { transform: rotate(-20deg); }
+    to { transform: rotate(20deg); }
+}
+
+@-webkit-keyframes legs1 {
+    from { -webkit-transform: rotate(-20deg); }
+    to { -webkit-transform: rotate(20deg); }
+}
+
+@keyframes legs2 {
+    from { transform: rotate(20deg); }
+    to { transform: rotate(-20deg); }
+}
+
+@-webkit-keyframes legs2 {
+    from { -webkit-transform: rotate(20deg); }
+    to { -webkit-transform: rotate(-20deg); }
+}
+
+@keyframes pig-body {
+    from { transform: translateY(0px) }
+    to { transform: translateY(10px) }
+}
+
+@-webkit-keyframes pig-body {
+    from { -webkit-transform: translateY(0px) }
+    to { -webkit-transform: translateY(10px) }
+}
+
+@keyframes pig-ear-tail {
+    from { transform: translateY(0px) rotate(-5deg) }
+    to { transform: translateY(10px) rotate(5deg) }
+}
+
+@-webkit-keyframes ear-tail {
+    from { -webkit-transform: translateY(0px) rotate(-5deg) }
+    to { -webkit-transform: translateY(10px) rotate(5deg) }
+}
+
+@keyframes fence-far {
+    from { left: -10px; }
+    to { left: -114px; }
+}
+
+@-webkit-keyframes fence-far {
+    from { left: -10px; }
+    to { left: -114px; }
+}
+
+@keyframes fence-near {
+    from { left: -10px; }
+    to { left: -288px; }
+}
+
+@-webkit-keyframes fence-near {
+    from { left: -10px; }
+    to { left: -288px; }
+}
+
+#pig-leg-right-front, #pig-leg-left-back {
+    animation: legs1 0.5s linear 0s infinite alternate;
+    -webkit-animation: legs1 0.5s linear 0s infinite alternate;
+}
+
+#pig-leg-left-front, #pig-leg-right-back {
+    animation: legs2 0.5s linear 0s infinite alternate;
+    -webkit-animation: legs2 0.5s linear 0s infinite alternate;
+}
+
+#pig-body {
+    animation: pig-body 0.25s linear 0s infinite alternate;
+    -webkit-animation: pig-body 0.25s linear 0s infinite alternate;
+}
+
+#pig-ear, #pig-tail {
+    animation: ear-tail 0.25s linear 0s infinite alternate;
+    -webkit-animation: ear-tail 0.25s linear 0s infinite alternate;
+}
+
+#fence-far {
+    animation: fence-far 2s linear 0s infinite alternate;
+    -webkit-animation: fence-far 2s linear 0s infinite;
+}
+
+#fence-near {
+    animation: fence-near 1s linear 0s infinite;
+    -webkit-animation: fence-near 1s linear 0s infinite;
+}

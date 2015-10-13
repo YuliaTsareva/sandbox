@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animations</title>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <style>
+        section {
+            display: inline-block;
+            float: left;
+        }
+
+        .container-1 {
+            position: relative;
+            width: 500px;
+            height: 100px;
+            background-color: #eee;
+        }
+
+        .circle-1 {
+            width: 50px;
+            height: 50px;
+            background-color: #f39c12;
+            position: absolute;
+
+            border-radius: 25px;
+            animation: move 2s ease 0s infinite alternate;
+        }
+
+        @keyframes move {
+            from {
+                left: 0;
+                top: 0;
+            }
+            to {
+                left: 450px;;
+                top: 50px;;
+            }
+        }
+
+        .container-2 {
+            position: relative;
+            width: 500px;
+            height: 100px;
+            background-color: #eee;
+        }
+
+        .circle-2 {
+            width: 50px;
+            height: 50px;
+            background-color: #f39c12;
+            position: absolute;
+
+            border-radius: 25px;
+            animation: move-steps 2s linear 0s infinite alternate;
+        }
+
+        @keyframes move-steps {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                top: 50px;
+            }
+            50% {
+                top: 0;
+            }
+            75% {
+                top: 50px;
+            }
+            100% {
+                left: 450px;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Animation</h1>
+
+<section>
+    <div class="container-1">
+        <div class="circle-1"></div>
+    </div>
+    <div>
+        <code>
+            <pre>
+.circle {
+    animation: move 2s ease 0s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        left: 0;
+        top: 0;
+    }
+    to {
+        left: 450px;;
+        top: 50px;;
+    }
+}
+            </pre>
+        </code>
+    </div>
+</section>
+
+<section>
+    <div class="container-2">
+        <div class="circle-2"></div>
+    </div>
+    <div>
+        <code>
+            <pre>
+.circle {
+    animation: move-steps 2s ease 0s infinite alternate;
+}
+
+@keyframes move-steps {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        top: 50px;
+    }
+    50% {
+        top: 0;
+    }
+    75% {
+        top: 50px;
+    }
+    100% {
+        left: 450px;
+        top: 0;
+    }
+}
+            </pre>
+        </code>
+    </div>
+</section>
+
+</body>
+</html>
