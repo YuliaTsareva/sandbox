@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+.toggle {
+  position: relative;
+  width: 65px;
+  height: 26px;
+  box-sizing: border-box;
+  border-top: 1px solid #c9c9c9;
+  border-radius: 14px;
+  background-color: #e2e2e2;
+  box-shadow: inset 0 0 1px 0 rgba(201, 201, 201, 0.75);
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  border-radius: 11px;
+}
+
+.toggle-label {
+  display: inline-block;
+  float: left;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.toggle:hover {
+  background-color: #03a9f4;
+  border-color: #03a9f4;
+  box-shadow: none;
+}
+
+.toggle:hover .toggle-circle {
+  background-color: #fff;
+}
+
+.toggle:hover .toggle-label {
+  color: #fff;
+}
+
+.toggle-off .toggle-circle {
+  float: left;
+  margin-left: 3px;
+  margin-right: 4px;
+  background: #6e6e76;
+}
+
+.toggle-on .toggle-circle {
+  float: right;
+  margin-left: 4px;
+  margin-right: 3px;
+  background: #03a9f4;
+}
+
+.toggle-off .toggle-label {
+  float: left;
+  color: #6e6e76;
+}
+
+.toggle-on .toggle-label {
+  float: right;
+  color: #03a9f4;
+}
