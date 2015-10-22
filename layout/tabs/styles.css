@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0 40px 30px;
+  background-color: #04a1ca;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.flag {
+  width: 23px;
+  height: 15px;
+  border: 1px solid #ddd;
+  /*margin: 2px 2px 0 2px;*/
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.tab {
+  font-weight: 300;
+}
+
+td {
+  padding: 3px 25px 3px 3px;
+}
+
+.city-info {
+  float: left;
+}
+
+.city-img {
+  float: right
+}

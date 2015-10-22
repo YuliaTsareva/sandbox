@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top 10 Cities by Population [scrollable tabs demo]</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tabs.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="tabs.js"></script>
+</head>
+<body>
+<h1>Top 10 Cities by Population [scrollable tabs demo]</h1>
+
+<div class="tabs">
+  <div class="tab-headers">
+    <div class="tab-header left-arrow">&#9664;</div>
+    <div class="tab-headers-inner">
+      <!--<div class="tab-header active"><a href="#shanghai">Shanghai</a></div>-->
+      <!--<div class="tab-header"><a href="#karachi">Karachi</a></div>-->
+      <!--<div class="tab-header"><a href="#lagos">Lagos</a></div>-->
+      <!--<div class="tab-header"><a href="#delhi">Delhi</a></div>-->
+      <!--<div class="tab-header"><a href="#tianjin">Tianjin</a></div>-->
+      <!--<div class="tab-header"><a href="#istanbul">Istanbul</a></div>-->
+      <!--<div class="tab-header"><a href="#tokyo">Tokyo</a></div>-->
+      <!--<div class="tab-header"><a href="#guangzhou">Guangzhou</a></div>-->
+      <!--<div class="tab-header"><a href="#mumbai">Mumbai</a></div>-->
+      <!--<div class="tab-header"><a href="#moscow">Moscow</a></div>-->
+    </div>
+    <div class="tab-header right-arrow">&#9654;</div>
+  </div>
+  <div class="tab-content">
+  </div>
+</div>
+<script id="headerTemplate" type="text/x-handlebars-template">
+  {{#each cities}}
+  <div class="tab-header"><a href="#{{name}}">{{name}}</a></div>
+  {{/each}}
+</script>
+<script id="contentTemplate" type="text/x-handlebars-template">
+  {{#each cities}}
+  <div id="{{name}}_tab" class="tab">
+    <h2>{{name}}</h2>
+    <table class="city-info">
+      <tr>
+        <td>Country</td>
+        <td><img class="flag" src="{{countryImage}}">{{country}}</td>
+      </tr>
+      <tr>
+        <td>Population</td>
+        <td>{{population}}</td>
+      </tr>
+      <tr>
+        <td>Density</td>
+        <td>{{density}}</td>
+      </tr>
+    </table>
+    <img class="city-img" src="{{image}}">
+  </div>
+  {{/each}}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+<script src="cities.js"></script>
+</body>
+</html>
