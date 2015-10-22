@@ -153,7 +153,7 @@ footer {
 }
 
 #fence-far {
-    animation: fence-far 2s linear 0s infinite alternate;
+    animation: fence-far 2s linear 0s infinite;
     -webkit-animation: fence-far 2s linear 0s infinite;
 }
 
