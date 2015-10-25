@@ -9,6 +9,7 @@ var init = (function () {
   function init() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
+
     width = canvas.width;
     height = canvas.height;
 
@@ -19,7 +20,7 @@ var init = (function () {
   }
 
   function drawFractal(from, to, depth) {
-    var color = getColor();
+    var color = getColor(depth);
     var width = getWidth(depth);
     drawLine(from, to, color, width);
 
@@ -34,8 +35,10 @@ var init = (function () {
     }, DELAY_MS);
   }
 
-  function getColor() {
-    return '#333';
+  function getColor(depth) {
+    var num = 51 + depth * 12;
+    var hex = num.toString(16);
+    return '#' + hex + hex + hex;
   }
 
   function getWidth(depth) {
