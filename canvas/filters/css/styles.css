@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+  margin: 30px 40px;
+  background-color: #eee;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+canvas {
+  border: 1px dotted black;
+  background-color: #fff;
+}
+
+.image {
+  float: left;
+}
+
+.filters {
+  float: left;
+  padding-left: 20px;
+  width: 250px;
+}
+
+.irs-min, .irs-max {
+  display: none;
+}
+
+.range-slider {
+  display: inline-block;
+}
+
+footer {
+  clear: both;
+  padding-top: 10px;
+}

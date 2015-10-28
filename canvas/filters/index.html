@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Filters [canvas demo]</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="rangeSlider/ion.rangeSlider.css">
+  <link rel="stylesheet" href="rangeSlider/ion.rangeSlider.skinFlat.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="rangeSlider/rangeSlider.min.js"></script>
+  <script src="app.js"></script>
+  <script src="canvas.js"></script>
+</head>
+<body>
+<h1>Image Filters</h1>
+<canvas id="canvas" width="400" height="400" class="image">
+  <p>Your browser does not support canvas</p>
+</canvas>
+
+<div class="filters">
+  <div class="form-group">
+    <input id="grayscaleChckBox" type="checkbox">
+    <label for="grayscaleChckBox">Grayscale</label>
+  </div>
+  <div class="form-group">
+    <label for="contrastSlider">Contrast</label>
+    <div id="contrastSlider" class="range-slider"></div>
+  </div>
+  <div class="form-group">
+    <label for="brightnessSlider">Brightness</label>
+    <div id="brightnessSlider" class="range-slider"></div>
+  </div>
+  <button id="resetBtn" type="button" class="btn btn-default btn-block">Reset changes</button>
+</div>
+<footer>I use <a href="https://github.com/IonDen/ion.rangeSlider">ion.rangeSlider</a> for sliders in this demo.</footer>
+</body>
+</html>

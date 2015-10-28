@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    'use strict';
+
+    window.demo = {};
+
+    demo.init = function () {
+      this.canvas = document.getElementById('canvas');
+      this.ctx = this.canvas.getContext('2d');
+      this.drawTriangle(this.ctx);
+      this.drawRectangle(this.ctx);
+      this.drawCircle(this.ctx);
+    };
+
+    demo.drawTriangle = function (ctx) {
+      ctx.strokeStyle = '#2ecc71';
+      ctx.lineWidth = 7;
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      ctx.moveTo(50, 185);
+      ctx.lineTo(250, 185);
+      ctx.lineTo(150, 50);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(46, 204, 113, 0.7)';
+      ctx.fill();
+      ctx.stroke();
+    };
+
+    demo.drawRectangle = function (ctx) {
+      ctx.strokeStyle = '#f1c40f';
+      ctx.lineWidth = 7;
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      ctx.moveTo(350, 50);
+      ctx.lineTo(550, 50);
+      ctx.lineTo(550, 185);
+      ctx.lineTo(350, 185);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(241, 196, 15, 0.7)';
+      ctx.fill();
+      ctx.stroke();
+    };
+
+    demo.drawCircle = function (ctx) {
+      ctx.strokeStyle = '#e74c3c';
+      ctx.lineWidth = 7;
+      ctx.beginPath();
+      ctx.arc(150, 315, 62, 0, 2 * Math.PI, false);
+      ctx.fillStyle = 'rgba(231, 76, 60, 0.7)';
+      ctx.fill();
+      ctx.stroke();
+    };
+  </script>
+</head>
+<body onLoad="demo.init()">
+<h1>Basic Shapes</h1>
+<canvas id="canvas" width="600" height="420">
+  <p>Your browser does not support canvas</p>
+</canvas>
+</body>
+</html>

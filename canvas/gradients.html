@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    'use strict';
+
+    window.demo = {};
+
+    demo.init = function () {
+      this.canvas = document.getElementById('canvas');
+      this.ctx = this.canvas.getContext('2d');
+      this.drawLinearGradient(this.ctx);
+      this.drawRadialGradient(this.ctx);
+      this.drawText(this.ctx);
+    };
+
+    demo.drawLinearGradient = function (ctx) {
+      ctx.beginPath();
+      ctx.strokeStyle = '#fff';
+      ctx.rect(50, 50, 200, 320);
+      ctx.closePath();
+      var grad = ctx.createLinearGradient(50, 50, 200, 320);
+      grad.addColorStop(0, '#1abc9c');
+      grad.addColorStop(1, '#f1c40f');
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.stroke();
+    };
+
+    demo.drawRadialGradient = function (ctx) {
+      ctx.beginPath();
+      ctx.strokeStyle = '#fff';
+      ctx.rect(350, 50, 200, 320);
+      ctx.closePath();
+      var grad = ctx.createRadialGradient(450, 210, 5, 450, 210, 200);
+      grad.addColorStop(0, '#9b59b6');
+      grad.addColorStop(1, '#1abc9c');
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.stroke();
+    };
+
+    demo.drawText = function (ctx) {
+      ctx.font = '18px sans-serif';
+      ctx.fillStyle = '#000';
+
+      var linear = 'Linear';
+      var w = ctx.measureText(linear).width;
+      ctx.fillText(linear, 150 - w / 2, 45);
+
+      var radial = 'Radial';
+      w = ctx.measureText(radial).width;
+      ctx.fillText(radial, 450 - w / 2, 45);
+    }
+  </script>
+</head>
+<body onLoad="demo.init()">
+<h1>Gradients and Text</h1>
+<canvas id="canvas" width="600" height="420">
+  <p>Your browser does not support canvas</p>
+</canvas>
+</body>
+</html>
