@@ -15,25 +15,34 @@
 </head>
 <body>
 <h1>Image Filters</h1>
-<canvas id="canvas" width="400" height="400" class="image">
-  <p>Your browser does not support canvas</p>
-</canvas>
 
-<div class="filters">
-  <div class="form-group">
-    <input id="grayscaleChckBox" type="checkbox">
-    <label for="grayscaleChckBox">Grayscale</label>
+<div class="main clear">
+  <canvas id="canvas" width="400" height="400" class="image">
+    <p>Your browser does not support canvas</p>
+  </canvas>
+
+  <div class="filters">
+    <div class="form-group">
+      <input id="grayscaleChckBox" type="checkbox">
+      <label for="grayscaleChckBox">Grayscale</label>
+    </div>
+    <div class="form-group">
+      <label for="contrastSlider">Contrast</label>
+
+      <div id="contrastSlider" class="range-slider"></div>
+    </div>
+    <div class="form-group">
+      <label for="brightnessSlider">Brightness</label>
+
+      <div id="brightnessSlider" class="range-slider"></div>
+    </div>
+    <button id="resetBtn" type="button" class="btn btn-default btn-block">Reset</button>
+    <div class="hint">Click on the image and hold the button pressed to see original image.</div>
   </div>
-  <div class="form-group">
-    <label for="contrastSlider">Contrast</label>
-    <div id="contrastSlider" class="range-slider"></div>
-  </div>
-  <div class="form-group">
-    <label for="brightnessSlider">Brightness</label>
-    <div id="brightnessSlider" class="range-slider"></div>
-  </div>
-  <button id="resetBtn" type="button" class="btn btn-default btn-block">Reset changes</button>
 </div>
-<footer>I use <a href="https://github.com/IonDen/ion.rangeSlider">ion.rangeSlider</a> for sliders in this demo.</footer>
+
+<footer class="hint">I use <a href="https://github.com/IonDen/ion.rangeSlider">ion.rangeSlider</a> for sliders in this
+  demo.
+</footer>
 </body>
 </html>

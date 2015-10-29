@@ -21,7 +21,10 @@
 
   function renderImage() {
     ctx.drawImage(imageObj, 0, 0, imageObj.width, imageObj.height, 0, 0, width, height);
-    applyFilters();
+
+    if (FiltersApp.filter.enabled) {
+      applyFilters();
+    }
   }
 
   function applyFilters() {

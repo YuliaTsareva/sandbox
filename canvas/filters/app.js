@@ -5,7 +5,8 @@
     filter: {
       contrast: 0,
       brightness: 0,
-      isGrayscale: false
+      isGrayscale: false,
+      enabled: true
     }
   };
 
@@ -42,8 +43,8 @@
 
     $('#resetBtn').click(function () {
       $('#grayscaleChckBox').prop('checked', false);
-      contrastSlider.data('ionRangeSlider').update({ from: 0 });
-      brightnessSlider.data('ionRangeSlider').update({ from: 0 });
+      contrastSlider.data('ionRangeSlider').update({from: 0});
+      brightnessSlider.data('ionRangeSlider').update({from: 0});
 
       FiltersApp.filter.contrast = 0;
       FiltersApp.filter.brightness = 0;
@@ -51,5 +52,14 @@
 
       FiltersApp.renderImage();
     });
+
+    $('#canvas')
+      .mousedown(function () {
+        FiltersApp.filter.enabled = false;
+        FiltersApp.renderImage();
+      }).mouseup(function () {
+        FiltersApp.filter.enabled = true;
+        FiltersApp.renderImage();
+      });
   });
 }());
