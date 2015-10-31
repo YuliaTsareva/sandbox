@@ -32,7 +32,7 @@
       this.canvas.onmousemove = function (e) {
         var currentTime = new Date().getTime();
 
-        if (currentTime - lastSquareTime > DELTA_MS) {
+        if (that.animationId && currentTime - lastSquareTime > DELTA_MS) {
           that.shapes.push(new Square(e.layerX, e.layerY));
           lastSquareTime = currentTime;
         }
