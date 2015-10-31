@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-right: -3px;
+    }
+  </style>
+  <script>
+    'use strict';
+
+    window.demo = {};
+
+    demo.init = function () {
+      this.canvas = document.getElementById('canvas');
+      this.width = this.canvas.width;
+      this.height = this.canvas.height;
+      this.ctx = this.canvas.getContext('2d');
+
+      this.shapes = [];
+
+      var that = this;
+      var lastSquareTime = 0;
+      var DELTA_MS = 100;
+      this.canvas.onmousemove = function (e) {
+        var currentTime = new Date().getTime();
+
+        if (currentTime - lastSquareTime > DELTA_MS) {
+          that.shapes.push(new Square(e.layerX, e.layerY));
+          lastSquareTime = currentTime;
+        }
+      };
+
+      this.animationId = null;
+      this.animate(this.ctx);
+    };
+
+    demo.animate = function (ctx) {
+      this.render(ctx);
+      this.animationId = requestAnimationFrame(this.animate.bind(this, ctx));
+    };
+
+    demo.play = function () {
+      if (!this.animationId) {
+        demo.animate(this.ctx);
+      }
+    };
+
+    demo.pause = function () {
+      if (this.animationId) {
+        cancelAnimationFrame(this.animationId);
+        this.animationId = null;
+      }
+    };
+
+    demo.render = function (ctx) {
+      ctx.clearRect(0, 0, this.width, this.height);
+      this.shapes.forEach(function (shape) {
+        shape.animate(ctx);
+      });
+    };
+
+    var SQUARE_SIZE = 10;
+
+    function Square(x, y) {
+      this.x = x - SQUARE_SIZE / 2;
+      this.y = y - SQUARE_SIZE / 2;
+      this.width = SQUARE_SIZE;
+      this.height = SQUARE_SIZE;
+      this.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    Square.prototype.animate = function (ctx) {
+      if (this.y + this.height < demo.height) {
+        this.y += 1;
+      }
+      this.render(ctx);
+    };
+
+    Square.prototype.render = function (ctx) {
+      ctx.fillStyle = this.color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    };
+  </script>
+</head>
+<body onLoad="demo.init()">
+<h1>Animation</h1>
+
+<div class="buttons">
+  <button onclick="demo.play()">Play</button>
+  <button onclick="demo.pause()">Pause</button>
+</div>
+<canvas id="canvas" width="600" height="420">
+  <p>Your browser does not support canvas</p>
+</canvas>
+</body>
+</html>
