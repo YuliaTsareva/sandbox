@@ -11,4 +11,5 @@ It is a place where I put my experimental projects. Here there are some of them:
 Drawings are mine :)
 
 ## Layout
-* [Scrollable Tabs](http://yuliatsareva.github.io/sandbox/layout/tabs/)
+* [Scrollable Tabs](http://yuliatsareva.github.io/sandbox/layout/tabs)
+* [CSS Sprites](http://yuliatsareva.github.io/sandbox/layout/sprites)
