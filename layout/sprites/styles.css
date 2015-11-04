@@ -1,0 +1,130 @@
+body {
+  margin: 40px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+.forecast-item {
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.today {
+  margin-right: 7px;
+}
+
+.date {
+  margin-bottom: 3px;
+  font-size: 20px;
+}
+
+.icon:before {
+  content: '';
+  background: url('icons.png') no-repeat;
+  background-size: 323px 342px;
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin-right: 12px;
+}
+
+.temperature {
+  height: 64px;
+  line-height: 64px;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.description {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forecast-body {
+  width: 140px;
+  padding: 25px 30px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #777;
+}
+
+/***** Icons *****/
+.day-clear {
+  background-position: -104px -85px;
+}
+
+.night-clear {
+  background-position: -9px -168px;
+}
+
+.day-few-clouds {
+  background-position: -265px -167px;
+}
+
+.night-few-clouds {
+  background-position: 0 -11px;
+}
+
+.day-skattered-clouds {
+  background-position: -170px -167px;
+}
+
+.night-skattered-clouds {
+  background-position: -252px -3px;
+}
+
+.day-broken-clouds, .night-broken-clouds {
+  background-position: -176px -80px;
+  height: 37px;
+}
+
+.day-rain, .day-shower-rain, .night-shower-rain {
+  background-position: -259px -79px;
+}
+
+.night-rain {
+  background-position: -87px 0;;
+  width: 77px;
+}
+
+.day-thunderstorm, .night-thunderstorm {
+  background-position: -97px -162px;;
+}
+
+.day-snow, .night-snow {
+  background-position: -176px -80px;;
+}
+
+.day-mist, .night-mist {
+  background: none;
+}
+/***** End of Icons *****/
+
+/***** Temperature *****/
+.very-cold {
+  background-color: #aad8fa;
+}
+
+.cold {
+  background-color: #d8f5f8;
+}
+
+.zero {
+  background-color: #eaedc8;
+}
+
+.warm {
+  background-color: #fff9c5;
+}
+
+.hot {
+  background-color: #ffecb4;
+}
+/***** End of Temperature *****/

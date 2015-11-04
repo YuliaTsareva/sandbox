@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saint Petersburg Forecast</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Saint Petersburg, Russia</h1>
+
+<div id="forecast"></div>
+
+<footer>
+  Demo of CSS sprites usage.
+  <br/>
+  Forecast provided by OpenWeatherMap.
+  <br/>
+  Icons from xoo.me.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+<script id="template" type="text/x-handlebars-template">
+  <div class="date">{{date}}</div>
+  <div class="forecast-body {{temperatureClass}}">
+    <div class="temperature icon {{icon}}">{{{formatDegrees temperature}}}</div>
+    <div class="description">{{description}}</div>
+  </div>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
