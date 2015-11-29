@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+  background-color: #ddd;
+  font-weight: 300;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 7px;
+  margin-top: 0;
+}
+
+h2 {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+em {
+  text-decoration: underline;
+}
+
+.col {
+  width: 45%;
+  float: left;
+  padding-top: 45px;
+  box-sizing: border-box;
+}
+
+#canvasContainer {
+  min-height: 100%;
+}
+
+.description {
+  margin-right: 40px;
+  width: 350px;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  background-color: #E5E5E5;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
