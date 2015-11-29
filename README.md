@@ -4,6 +4,7 @@ It is a place where I put my experimental projects. Here there are some of them:
 * [H-fractal](http://yuliatsareva.github.io/sandbox/canvas/h-fractal.html)
 * [Tree-fractal](http://yuliatsareva.github.io/sandbox/canvas/tree-fractal.html)
 * [Image Filters](http://yuliatsareva.github.io/sandbox/canvas/filters)
+* [Suprematist Composition by Kazimir Malevich](http://yuliatsareva.github.io/sandbox/canvas/suprematist)
 
 ## CSS Animations
 * [3D Cube](http://yuliatsareva.github.io/sandbox/css-animation/cube)
