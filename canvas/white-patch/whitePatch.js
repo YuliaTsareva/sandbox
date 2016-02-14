@@ -3,9 +3,9 @@
 var width = 300;
 var height = 300;
 
-loadImage('../images/cat1.jpg', 1);
-loadImage('../images/cat2.jpg', 2);
-loadImage('../images/cat3.jpg', 3);
+loadImage('images/cat1.jpg', 1);
+loadImage('images/cat2.jpg', 2);
+loadImage('images/cat3.jpg', 3);
 
 function loadImage(imageUrl, index) {
     var originalImageCanvas = document.getElementById('originalImage' + index);
