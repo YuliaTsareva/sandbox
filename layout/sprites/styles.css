@@ -30,10 +30,11 @@ h1 {
   width: 64px;
   height: 64px;
   float: left;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .temperature {
+  padding-left: 10px;
   height: 64px;
   line-height: 64px;
   font-size: 26px;
@@ -43,6 +44,11 @@ h1 {
 .description {
   margin-top: 10px;
   text-align: center;
+}
+
+.description_long {
+  font-size: 13px;
+  line-height: 22px;
 }
 
 .forecast-body {
@@ -57,52 +63,53 @@ footer {
 }
 
 /***** Icons *****/
-.day-clear {
-  background-position: -104px -85px;
+.day-clear.icon:before {
+  background-position: -93px -79px;
 }
 
-.night-clear {
-  background-position: -9px -168px;
+.night-clear.icon:before {
+  background-position: 0 -161px;
 }
 
-.day-few-clouds {
-  background-position: -265px -167px;
+.day-few-clouds.icon:before {
+  background-position: -259px -161px;
 }
 
-.night-few-clouds {
-  background-position: 0 -11px;
+.night-few-clouds.icon:before {
+  background-position: 0 -2px;
 }
 
-.day-skattered-clouds {
+.day-skattered-clouds.icon:before {
   background-position: -170px -167px;
+  width: 70px;
 }
 
-.night-skattered-clouds {
+.night-skattered-clouds.icon:before {
   background-position: -252px -3px;
 }
 
-.day-broken-clouds, .night-broken-clouds {
+.day-broken-clouds.icon:before, .night-broken-clouds.icon:before {
   background-position: -176px -80px;
 }
 
-.day-rain, .day-shower-rain, .night-shower-rain {
+.day-rain.icon:before, .day-shower-rain.icon:before, .night-shower-rain.icon:before {
   background-position: -259px -79px;
 }
 
-.night-rain {
+.night-rain.icon:before {
   background-position: -87px 0;;
   width: 77px;
 }
 
-.day-thunderstorm, .night-thunderstorm {
-  background-position: -97px -162px;;
+.day-thunderstorm.icon:before, .night-thunderstorm.icon:before {
+  background-position: -94px -160px;;
 }
 
-.day-snow, .night-snow {
-  background-position: -176px -80px;;
+.day-snow.icon:before, .night-snow.icon:before {
+  background-position: -172px -80px;;
 }
 
-.day-mist, .night-mist {
+.icon:before.day-mist, .icon:before.night-mist {
   background: none;
 }
 /***** End of Icons *****/

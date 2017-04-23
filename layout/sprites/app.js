@@ -78,12 +78,14 @@
   function extractForecastFromDTO(dto) {
     var temperature = Math.round(dto.main.temp);
     var description = dto.weather[0].description.toLowerCase();
+    var descriptionClass = description.length > 20 ? 'description_long' : '';
     var icon = API_ICON_TO_CLASSES[dto.weather[0].icon];
 
     return {
       temperature: temperature,
       temperatureClass: getTemperatureClass(temperature),
       description: description,
+      descriptionClass: descriptionClass,
       icon: icon
     };
   }
